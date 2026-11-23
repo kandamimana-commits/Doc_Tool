@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ศูนย์รวมเครื่องมือสำหรับงานธุรการ">
+  <title>ธุรการ'Tools</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2326243f'/%3E%3Cpath d='M18 18h28v34H18z' fill='%23fff'/%3E%3Cpath d='M24 13h16v10H24z' rx='4' fill='%23ffcf56'/%3E%3Cpath d='M24 31h16M24 39h16' stroke='%23625bd5' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#242238;--violet:#625bd5;--yellow:#ffd35e;--mint:#7fdbca;--pink:#ff8fa3;--paper:#fff;--bg:#f5f6fb;--line:#dcddea}
+    *{box-sizing:border-box}html,body{height:100%;margin:0}body{font-family:Sarabun,sans-serif;color:var(--ink);background:var(--bg)}
+    button{font:inherit}.app{height:100%;display:grid;grid-template-columns:236px 1fr;overflow:hidden}.sidebar{min-height:0;overflow-y:auto;padding:22px 16px;background:var(--paper);border-right:2px solid var(--ink);display:flex;flex-direction:column;gap:24px;z-index:2}.brand{display:flex;gap:11px;align-items:center;padding:0 7px}.brand-mark{width:43px;height:43px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:13px;background:var(--yellow);box-shadow:3px 3px 0 var(--ink);font-size:22px}.brand strong{font-size:21px;letter-spacing:-.5px}.brand small{display:block;color:#74758a;font-size:12px}.nav{display:grid;gap:9px;flex:none}.nav button{width:100%;border:2px solid transparent;background:transparent;color:#54556a;border-radius:13px;padding:11px 12px;display:flex;align-items:center;gap:11px;text-align:left;cursor:pointer;font-weight:600;font-size:15px}.nav button:hover{background:#f1f0ff}.nav button.active{border-color:var(--ink);background:var(--violet);color:#fff;box-shadow:3px 3px 0 var(--ink)}.nav-icon{width:29px;height:29px;display:grid;place-items:center;border-radius:9px;background:rgba(255,255,255,.2);font-size:17px}.footnote{margin-top:auto;color:#85869a;font-size:12px;padding:7px}.stage{min-width:0;min-height:0;height:100%;display:flex;flex-direction:column;overflow:hidden}.mobile-head{display:none}.home{flex:1;min-height:0;height:auto;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:clamp(24px,5vw,60px)}.hero{max-width:900px;margin:0 auto 28px}.eyebrow{display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:5px 11px;background:var(--mint);font-size:13px;font-weight:700;transform:rotate(-1deg)}h1{font-size:clamp(34px,6vw,66px);line-height:1;margin:17px 0 12px;letter-spacing:-2px}h1 span{color:var(--violet)}.hero p{font-size:18px;color:#67687c;margin:0;line-height:1.7}.cards{max-width:900px;margin:auto;padding-bottom:38px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.tool-card{min-height:225px;border:2px solid var(--ink);border-radius:20px;background:#fff;padding:22px;box-shadow:6px 6px 0 rgba(36,34,56,.15);display:flex;flex-direction:column;transition:.16s ease;cursor:pointer}.tool-card:hover{transform:translate(-2px,-3px);box-shadow:9px 10px 0 rgba(36,34,56,.17)}.tool-card:nth-child(1) .card-icon{background:var(--yellow)}.tool-card:nth-child(2) .card-icon{background:var(--mint)}.tool-card:nth-child(3) .card-icon{background:var(--pink)}.tool-card:nth-child(4) .card-icon{background:#ffb86b}.card-icon{width:54px;height:54px;border:2px solid var(--ink);border-radius:15px;display:grid;place-items:center;font-size:27px}.tool-card h2{font-size:21px;margin:17px 0 7px}.tool-card p{font-size:14px;line-height:1.65;color:#6e6f82;margin:0}.open{margin-top:auto;padding-top:16px;font-weight:700;color:var(--violet)}.workspace{display:none;height:100%;min-height:0}.workspace.opened{display:flex;flex-direction:column}.toolbar{height:58px;flex:none;background:#fff;border-bottom:2px solid var(--ink);display:flex;align-items:center;gap:10px;padding:9px 16px}.back{border:2px solid var(--ink);border-radius:10px;background:var(--yellow);height:38px;padding:0 13px;font-weight:700;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}.tool-title{font-weight:700}.frame{width:100%;height:calc(100% - 58px);border:0;background:#fff}.loading{margin-left:auto;color:#85869a;font-size:13px}
+    @media(max-width:800px){.app{grid-template-columns:1fr;overflow:hidden}.sidebar{display:none}.stage{height:100vh}.mobile-head{height:64px;display:flex;align-items:center;gap:10px;padding:10px 14px;background:#fff;border-bottom:2px solid var(--ink);flex:none}.mobile-head .brand-mark{width:38px;height:38px;font-size:19px}.mobile-head strong{font-size:19px}.home{padding:28px 16px 45px}.cards{grid-template-columns:1fr}.tool-card{min-height:205px}h1{letter-spacing:-1px}.workspace{height:calc(100vh - 64px)}.toolbar{padding:9px 11px}.loading{display:none}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">📋</div><div><strong>ธุรการ'Tools</strong><small>โต๊ะเครื่องมือของฉัน</small></div></div>
+      <nav class="nav" aria-label="เครื่องมือ">
+        <button class="active" data-view="home"><span class="nav-icon">⌂</span>หน้ารวม</button>
+        <button data-tool="expense"><span class="nav-icon">🧾</span>ทำเอกสารสลิป</button>
+        <button data-tool="orders"><span class="nav-icon">📦</span>คำนวณออเดอร์</button>
+        <button data-tool="claims"><span class="nav-icon">📎</span>เคลมธรรมดา</button>
+        <button data-tool="stalled"><span class="nav-icon">⏳</span>เคลมไม่เคลื่อนไหว</button>
+        <button data-tool="batch"><span class="nav-icon">🗂️</span>แบบฟอร์มเคลมหลายเลข</button>
+        <button data-tool="withdrawal"><span class="nav-icon">📦</span>ตารางเบิกของ</button>
+        <button data-tool="tracking"><span class="nav-icon">🔎</span>จัดชุดรีเสิร์ชพัสดุ</button>
+      </nav>
+      <div class="footnote">เลือกเครื่องมือแล้วเริ่มงานได้เลย<br>ข้อมูลส่วนตัวจะอยู่ในเบราว์เซอร์เครื่องนี้</div>
+    </aside>
+    <main class="stage">
+      <header class="mobile-head"><div class="brand-mark">📋</div><strong>ธุรการ'Tools</strong></header>
+      <section class="home" id="home">
+        <div class="hero"><span class="eyebrow">WORK DESK ✦</span><h1>งานธุรการ<br><span>รวมไว้โต๊ะเดียว</span></h1><p>เลือกสิ่งที่อยากทำ แล้วเริ่มงานได้ทันที</p></div>
+        <div class="cards">
+          <article class="tool-card" tabindex="0" role="button" data-tool="expense"><div class="card-icon">🧾</div><h2>ทำเอกสารสลิป</h2><p>จัดสลิปและรูปคำสั่งซื้อให้เป็นเอกสารพร้อมพิมพ์</p><div class="open">เปิดเครื่องมือ →</div></article>
+          <article class="tool-card" tabindex="0" role="button" data-tool="orders"><div class="card-icon">📦</div><h2>คำนวณออเดอร์</h2><p>นำเข้าไฟล์เพื่อดูว่าสต๊อกจะเคลียร์ออเดอร์ได้ถึงวันไหน</p><div class="open">เปิดเครื่องมือ →</div></article>
+          <article class="tool-card" tabindex="0" role="button" data-tool="claims"><div class="card-icon">📎</div><h2>ทำเอกสารเคลม</h2><p>เครื่องมือเคลมแบบเดิม เลือกรูปและสร้าง DOCX หรือ PDF แยกกัน</p><div class="open">เปิดเครื่องมือ →</div></article>
+          <article class="tool-card" tabindex="0" role="button" data-tool="stalled"><div class="card-icon">⏳</div><h2>เคลมพัสดุไม่เคลื่อนไหว</h2><p>กรอกครั้งเดียว ลากรูปมาวาง แล้วรับเอกสาร 2 ชุดพร้อมกันใน ZIP</p><div class="open">เปิดเครื่องมือ →</div></article>
+          <article class="tool-card" tabindex="0" role="button" data-tool="batch"><div class="card-icon">🗂️</div><h2>แบบฟอร์มเคลมหลายเลข</h2><p>จับคู่ไฟล์ที่อยู่กับชีทเคลม แล้วสร้างแบบฟอร์ม PDF หลายเลขเป็น ZIP เดียว</p><div class="open">เปิดเครื่องมือ →</div></article>
+          <article class="tool-card" tabindex="0" role="button" data-tool="withdrawal"><div class="card-icon">📦</div><h2>สรุปเบิกของตามสินค้า</h2><p>แยกสินค้าหลัก ออเดอร์เดี่ยว และออเดอร์อัพ พร้อมตารางเบิก Excel</p><div class="open">เปิดเครื่องมือ →</div></article>
+                  <article class="tool-card" tabindex="0" role="button" data-tool="tracking"><div class="card-icon">🔎</div><h2>จัดชุดรีเสิร์ชพัสดุ</h2><p>รวมหลายไฟล์ แยกตาม VIP ชุดละ 500 และกรองผลเซ็นรับเพื่อรีเสิร์ชต่อ</p><div class="open">เปิดเครื่องมือ →</div></article>
+        </div>
+      </section>
+      <section class="workspace" id="workspace">
+        <div class="toolbar"><button class="back" id="back">← กลับ</button><span class="tool-title" id="toolTitle"></span><span class="loading" id="loading"></span></div>
+        <iframe class="frame" id="toolFrame" title="เครื่องมือธุรการ"></iframe>
+      </section>
+    </main>
+  </div>
+  <script>
+    const tools={
+      expense:{title:'ทำเอกสารสลิป',src:'tools/expense-slip.html'},
+      orders:{title:'คำนวณออเดอร์',src:'tools/order-planner.html'},
+      claims:{title:'ทำเอกสารเคลม',src:'tools/claims.html'},
+      stalled:{title:'เคลมพัสดุไม่เคลื่อนไหว',src:'tools/stalled-claims.html'},
+      batch:{title:'แบบฟอร์มเคลมหลายเลข',src:'tools/batch-claim-pdf.html'},
+      withdrawal:{title:'สรุปเบิกของตามสินค้า',src:'tools/product-withdrawal.html'},
+      tracking:{title:'จัดชุดรีเสิร์ชพัสดุ',src:'tools/tracking-research.html'}
+    };
+    const home=document.getElementById('home'),workspace=document.getElementById('workspace'),frame=document.getElementById('toolFrame'),title=document.getElementById('toolTitle'),loading=document.getElementById('loading');
+    function selectNav(key){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',key==='home'?b.dataset.view==='home':b.dataset.tool===key));}
+    function openTool(key){const tool=tools[key];if(!tool)return;home.style.display='none';workspace.classList.add('opened');title.textContent=tool.title;loading.textContent='กำลังเปิด…';selectNav(key);if(frame.getAttribute('src')!==tool.src)frame.src=tool.src;else loading.textContent='';}
+    function showHome(){workspace.classList.remove('opened');home.style.display='block';selectNav('home');}
+    frame.addEventListener('load',()=>loading.textContent='');
+    document.querySelectorAll('[data-tool]').forEach(el=>{el.addEventListener('click',()=>openTool(el.dataset.tool));el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTool(el.dataset.tool)}})});
+    document.querySelector('[data-view="home"]').addEventListener('click',showHome);
+    document.getElementById('back').addEventListener('click',showHome);
+  </script>
+</body>
+</html>
